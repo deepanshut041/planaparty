@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     moduleId: module.id,
     selector: 'auth',
     templateUrl: 'auth.component.html',
-    styleUrls: ['auth.component.scss']
+    styleUrls: ['auth.component.css']
 })
 export class AuthComponent {
 
