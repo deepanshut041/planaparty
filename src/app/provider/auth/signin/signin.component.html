@@ -1,12 +1,12 @@
 <div id="login-page">
     <div class="container">
-    
-        <form class="form-login">
+        <form class="form-login" (submit)="onSubmit(email.value,password.value)" >
           <h2 class="form-login-heading">sign in now</h2>
-          <div class="login-wrap">
-              <input type="text" class="form-control" placeholder="User ID" autofocus="">
-              <br>
-              <input type="password" class="form-control" placeholder="Password">
+          <div class="login-wrap" id="form">
+                <input type="email" class="form-control" placeholder="Email.." autofocus="" #email>
+                <br>
+                <input type="password" class="form-control" placeholder="Password" #password>
+                <br>
               <label class="checkbox">
                   <input type="checkbox" value="remember-me"> Remember me
                   <span class="pull-right">
@@ -27,9 +27,16 @@
                       Create an account
                   </a>
               </div>
+              <hr>
+              <div class="row" *ngIf="err">
+                <div class="col-12">
+                    <div class="alert alert-danger" role="alert">
+                        {{err}}
+                      </div>
+                </div>
+              </div>
   
-          </div>
-  
+          </div>  
             <!--Forgot password  Modal -->
             <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
                 <div class="modal-dialog">
@@ -51,8 +58,16 @@
                 </div>
             </div>
             <!-- modal -->
-  
-        </form>	  	
-    
+        </form>	
+        <div class="text-center spinner" id="spinner">
+                <br>
+                <br>
+                <i class="fa fa-spinner fa-4x fa-spin" aria-hidden="true"></i>
+                <br>
+                <h4>Please Wait!</h4>
+                <br>
+                <br>
+                <br> 
+            </div>  	
     </div>
 </div>

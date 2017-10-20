@@ -1,5 +1,8 @@
 #login-page{
     padding: 100px 0px;
+    height: 100vh;
+    display: none;
+    
 }
 
 .form-login {
@@ -77,3 +80,9 @@
     background: #4ECDC4;
 }
 
+.spinner{
+    color: #4ECDC4;
+    background-color: #fff;
+    margin: auto;
+    width: 330px;
+}
