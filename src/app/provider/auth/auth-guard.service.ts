@@ -16,8 +16,14 @@ export class AuthGuard implements CanActivate {
         .take(1)
         .map(state => !!state)
         .do(authenticated => {
-      if 
-        (!authenticated) this.router.navigate([ '/provider/auth/signin' ]);
+      if (!authenticated){ 
+        this.router.navigate([ '/provider/auth/signin' ]);
+        }
+      else{
+        if(!this.auth.auth.currentUser.emailVerified){
+          console.log("Verify your email first");
+        }
+      }
       })
     } 
  
