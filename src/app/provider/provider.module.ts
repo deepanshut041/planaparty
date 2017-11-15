@@ -11,7 +11,9 @@ import { AuthModule } from './auth/auth.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ProviderRoutingModule } from './provider-routing.module';
 
+
 import { AuthGuard } from './auth/auth-guard.service';
+import { VerifyGuard } from "./auth/verify-guard.service";
 @NgModule({
     imports: [AuthModule, DashboardModule, ProviderRoutingModule, HttpClientModule,
         FormsModule, ReactiveFormsModule,AngularFireAuthModule,AngularFireDatabaseModule
@@ -23,7 +25,7 @@ import { AuthGuard } from './auth/auth-guard.service';
     exports: [
         ProviderComponent,
     ],
-    providers:[AuthGuard]
+    providers:[AuthGuard,VerifyGuard]
 })
 export class ProviderModule {
 

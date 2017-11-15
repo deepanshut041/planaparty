@@ -12,7 +12,11 @@ export class AuthService {
     }
 
     getUser(){
-        return this.afAuth.auth.currentUser
+        return this.afAuth.auth.currentUser;
+    }
+
+    getUserStatus(){
+        return this.afAuth.authState;
     }
 
     signup(email:string, password:string){

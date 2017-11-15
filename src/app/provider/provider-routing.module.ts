@@ -8,6 +8,7 @@ import { RegisterComponent } from "./auth/register/register.component";
 import { SigninComponent } from "./auth/signin/signin.component";
 import { SignupComponent } from "./auth/signup/signup.component";
 import { AuthGuard } from './auth/auth-guard.service';
+import { VerifyGuard } from "./auth/verify-guard.service";
 import { VerifyComponent } from "./auth/verify/verify.component";
 import { ForgetComponent } from "./auth/forget/forget.component";
 import { ResetComponent } from "./auth/reset/reset.component";
@@ -16,7 +17,7 @@ const routes: Routes = [
     {path:'auth', component:AuthComponent,children:[
         {path:'signin', component:SigninComponent},
         {path: 'signup', component:SignupComponent},
-        {path: 'verify', component:VerifyComponent},
+        {path: 'verify', component:VerifyComponent,canActivate:[VerifyGuard]},
         {path: 'reset', component:ResetComponent,canActivate: [AuthGuard]},
         {path: 'forget', component:ForgetComponent},
         {path:'register', component:RegisterComponent,canActivate: [AuthGuard] },

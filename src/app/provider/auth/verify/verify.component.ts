@@ -1,4 +1,4 @@
-import { Component, OnInit} from "@angular/core";
+import { Component, OnInit, AfterViewInit} from "@angular/core";
 import { AuthService } from "../auth.service";
 import { validateConfig } from "@angular/router/src/config";
 import { Router } from "@angular/router";
@@ -9,11 +9,17 @@ import { Router } from "@angular/router";
   styleUrls: ["./verify.component.css"]
 })
 
-export class VerifyComponent implements OnInit {
+export class VerifyComponent implements OnInit,AfterViewInit {
   alertMsg;
+  email = "";
   constructor(private _authService:AuthService,private router:Router ) { 
+    this.email =_authService.getUser().email;
   }
   ngOnInit() {
+    
+  }
+
+  ngAfterViewInit(){
   }
 
   showForm(){
