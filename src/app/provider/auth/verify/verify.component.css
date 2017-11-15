@@ -76,9 +76,7 @@
     transition: all 1 ease-in 1;
 }
 
-#verifyEmailAlert .spinner{
+.spinner{
     color: #4ECDC4;
     background-color: #fff;
-    margin: auto;
-    width: 330px;
 }
