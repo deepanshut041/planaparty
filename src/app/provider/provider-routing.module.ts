@@ -6,11 +6,13 @@ import { RegisterComponent } from "./auth/register/register.component";
 import { SigninComponent } from "./auth/signin/signin.component";
 import { SignupComponent } from "./auth/signup/signup.component";
 import { AuthGuard } from './auth/auth-guard.service';
+import { VerifyComponent } from "./auth/verify/verify.component";
 
 const routes: Routes = [
     {path:'auth', component:AuthComponent,children:[
         {path:'signin', component:SigninComponent},
         {path: 'signup', component:SignupComponent},
+        {path: 'verify', component:VerifyComponent},
         {path:'register', component:RegisterComponent,canActivate: [AuthGuard] },
         {path:'', redirectTo:'signin'}
         ]},

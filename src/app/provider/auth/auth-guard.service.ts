@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate {
         }
       else{
         if(!this.auth.auth.currentUser.emailVerified){
-          console.log("Verify your email first");
+          this.router.navigate(['/provider/auth/verify'])
         }
       }
       })

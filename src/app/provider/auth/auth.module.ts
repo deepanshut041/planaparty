@@ -8,6 +8,7 @@ import { AuthComponent } from './auth.component';
 import { RegisterComponent } from "./register/register.component";
 import { SigninComponent } from "./signin/signin.component";
 import { SignupComponent } from "./signup/signup.component";
+import { VerifyComponent } from "./verify/verify.component";
 
 //This is auth service
 import { AuthService } from "./auth.service";
@@ -17,7 +18,7 @@ import { AuthService } from "./auth.service";
 
     ],
     declarations: [
-        AuthComponent, RegisterComponent, SigninComponent, SignupComponent
+        AuthComponent, RegisterComponent, SigninComponent, SignupComponent, VerifyComponent
     ],
     exports: [
         AuthComponent,
