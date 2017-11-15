@@ -15,7 +15,7 @@
 
 .panel .panel-head h4{
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 100;
 }
 
 
@@ -51,10 +51,34 @@
     transition: all 1s ease-in;
     -webkit-text-stroke: 20px #fff;
 }
-.verify-alert-message{
+
+#verifyEmailAlert .verify-alert-error-icon{
+    padding: 20px;
+    color: #721c24!important;
+    font-size: 70px;
+    transition: all 1s ease-in;
+    -webkit-text-stroke: 20px #fff;
+}
+
+#verifyEmailAlert .verify-alert-message{
     color: #28a745;
     font-size: 32px;
     -webkit-transition: all 1 ease-in 1;
     -moz-transition: all 1 ease-in 1;
     transition: all 1 ease-in 1;
+}
+
+#verifyEmailAlert .verify-alert-error-message{
+    color: #721c24;
+    font-size: 32px;
+    -webkit-transition: all 1 ease-in 1;
+    -moz-transition: all 1 ease-in 1;
+    transition: all 1 ease-in 1;
+}
+
+#verifyEmailAlert .spinner{
+    color: #4ECDC4;
+    background-color: #fff;
+    margin: auto;
+    width: 330px;
 }

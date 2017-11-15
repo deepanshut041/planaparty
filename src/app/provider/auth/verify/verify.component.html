@@ -19,26 +19,33 @@
                 <button class="btn btn-info" (click)="showForm()">Change your Address</button>
               </div>
               <div class="input-group verify-button-box hide" id="verifyResetEmail">
-                <input type="text" class="form-control" placeholder="Email..." aria-label="Product name">
+                <input type="text" class="form-control" placeholder="Email..." aria-label="Product name" #newEmail>
                 <span class="input-group-btn">
-                  <button class="btn btn-info" type="button" (click)="sendForm()">Reset</button>
+                  <button class="btn btn-info" type="button" (click)="sendForm(newEmail.value)">Reset</button>
                 </span>
               </div>
             </div>
           </div>
         </div>
         <div class="text-center hide" id="verifyEmailAlert">
-          <div class="verify-alert-icon">
+          <div class="verify-alert-icon" id="verifyEmailAlertIcon">
             <i class="fa fa-check fa-2x"></i>
           </div>
-          <div class="verify-alert-message">
+          <div class="verify-alert-message" id="verifyEmailAlertMsg">
             <p>{{alertMsg}}</p>
           </div>
         </div>
+        <div class="text-center spinner hide" id="spinner">
+          <br><br>
+          <i class="fa fa-spinner fa-4x fa-spin" aria-hidden="true"></i>
+          <br>
+          <h4>Please Wait!</h4>
+          <br><br><br> 
+        </div>  
         <div class="panel-footer">
           <div class="text-right">
             <br>
-            <p><a href="">Sign Out</a></p>
+            <button class="btn btn-secondary" (click)="logout()">Sign Out</button>
           </div>
         </div>
       </div>
