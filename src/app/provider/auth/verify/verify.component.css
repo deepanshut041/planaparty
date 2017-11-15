@@ -14,7 +14,8 @@
 }
 
 .panel .panel-head h4{
-    text-transform: uppercase; 
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 
@@ -29,4 +30,31 @@
 }
 .panel .panel-body .verify-button-box button:hover{
     cursor: pointer;
+}
+.hide{
+    display: none;
+    -webkit-transition: all 1 ease-out;
+    -moz-transition: all 1 ease-out;
+    transition: all 1 ease-out;
+}
+.display{
+    display: block;
+    -webkit-transition: all 1 ease-in .5;
+    -moz-transition: all 1 ease-in .5;
+    transition: all 1 ease-in .5;
+}
+
+#verifyEmailAlert .verify-alert-icon{
+    padding: 20px;
+    color: #f0ad4e!important;
+    font-size: 70px;
+    transition: all 1s ease-in;
+    -webkit-text-stroke: 20px #fff;
+}
+.verify-alert-message{
+    color: #28a745;
+    font-size: 32px;
+    -webkit-transition: all 1 ease-in 1;
+    -moz-transition: all 1 ease-in 1;
+    transition: all 1 ease-in 1;
 }
