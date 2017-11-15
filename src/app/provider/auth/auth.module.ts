@@ -9,16 +9,17 @@ import { RegisterComponent } from "./register/register.component";
 import { SigninComponent } from "./signin/signin.component";
 import { SignupComponent } from "./signup/signup.component";
 import { VerifyComponent } from "./verify/verify.component";
+import { ForgetComponent } from "./forget/forget.component";
+import { ResetComponent } from "./reset/reset.component";
 
 //This is auth service
 import { AuthService } from "./auth.service";
 
 @NgModule({
-    imports: [CommonModule, FormsModule, RouterModule
-
-    ],
+    imports: [CommonModule, FormsModule, RouterModule],
     declarations: [
-        AuthComponent, RegisterComponent, SigninComponent, SignupComponent, VerifyComponent
+        AuthComponent, RegisterComponent, SigninComponent, SignupComponent, VerifyComponent, ForgetComponent,
+        ResetComponent
     ],
     exports: [
         AuthComponent,
@@ -26,5 +27,4 @@ import { AuthService } from "./auth.service";
     providers:[ AuthService]
 })
 export class AuthModule {
-
 }
