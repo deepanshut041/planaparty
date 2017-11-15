@@ -1,33 +1,39 @@
-<div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <div class="text-center">
-                      <h3><i class="fa fa-lock fa-4x"></i></h3>
-                      <h2 class="text-center">Forgot Password?</h2>
-                      <p>You can reset your password here.</p>
-                      <div class="panel-body">
-        
-                        <form id="register-form" role="form" autocomplete="off" class="form" method="post">
-        
-                          <div class="form-group">
-                            <div class="input-group">
-                              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                              <input id="email" name="email" placeholder="email address" class="form-control" type="email">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit">
-                          </div>
-                          
-                          <input type="hidden" class="hide" name="token" id="token" value=""> 
-                        </form>
-        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<div class="container" id="verify">
+  <div class="row justify-content-center main">
+    <div class="col-lg-7 col-md-9 col-12 align-self-center">
+      <div class="panel">
+        <div class="panel-head">
+          <h4 class="text-center">Verify Your Email</h4>
+          <hr>
+          <p>We now need to verfiy your email address .We've sent an email to
+            <span> deepanshut041@gmail.com </span>to verify your address. Please click the link in that email to continue
+          </p>
         </div>
+        <div class="panel-body text-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-7">
+              <div class="verify-button-box">
+                <button class="btn btn-info">Resend Verification Email</button>
+              </div>
+              <div class="verify-button-box">
+                <button class="btn btn-info">Change your Address</button>
+              </div>
+              <div class="input-group verify-button-box">
+                <input type="text" class="form-control" placeholder="Email..." aria-label="Product name">
+                <span class="input-group-btn">
+                  <button class="btn btn-info" type="button">Reset</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <div class="text-right">
+            <br>
+            <p><a href="">Sign Out</a></p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
