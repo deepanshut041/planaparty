@@ -11,7 +11,8 @@
         <div class="panel-body text-center" id="resetPasswordBody">
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <form>
+              <form (submit)="submitForm(currentPassword.value,
+              newPassword.value,confirmPassword.value)">
                 <div class="form-group text-left">
                   <label for="resetPasswordCurrent">Current Password</label>
                   <input type="password" class="form-control" id="resetPasswordCurrent" #currentPassword>
@@ -25,8 +26,7 @@
                   <input type="password" class="form-control" id="resetPasswordConfirm" #confirmPassword>
                 </div>
                 <div class="verify-button-box" id="resetPassWordButton">
-                  <button class="btn btn-info" (click)="showForm(currentPassword.value,
-                  newPassword, confirmPassword)">Reset</button>
+                  <button class="btn btn-info" type="submit" >Reset</button>
                 </div>
               </form>
             </div>
