@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../auth.service";
+import { Router } from "@angular/router";
+
 
 @Component({
   selector: "app-signup",
@@ -9,7 +11,7 @@ import { AuthService } from "../auth.service";
 
 export class SignupComponent implements OnInit {
   msg:any;
-  constructor(private _authService:AuthService) { 
+  constructor(private _authService:AuthService, private router:Router) { 
 
   }
 
@@ -18,7 +20,9 @@ export class SignupComponent implements OnInit {
   signup(email:string,password:string){
     var send = this._authService.signup(email,password)
     send.then((success)=>{
-      this._authService.getUser().sendEmailVerification()
+      this._authService.getUser().sendEmailVerification().then(()=>{
+        this.router.navigate(['/provider/auth/verify']);
+      })
     }).catch((err)=>{
       this.msg = err.message
       console.log(this.msg);

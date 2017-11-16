@@ -65,7 +65,7 @@ export class ResetComponent implements OnInit {
     if (newPassword === confirmPassword) {
       this.hideVerifyBody();
       this.showSpinner();
-      this._authService.getUser().updatePassword(newPassword).then(() => {
+      
         this._authService.getUser().updatePassword(newPassword).then(()=>{
           this.alertMsg = "Changed your Password";
           this.hideSpinner();
@@ -75,15 +75,14 @@ export class ResetComponent implements OnInit {
           this.hideSpinner();
           this.errorAlert();
         })
-      }).catch((err)=>{
-        this.alertMsg = err.message;
-        this.hideSpinner();
-        this.errorAlert();
-      })
     }
     else{
 
     }
+  }
+
+  logout(){
+    this._authService.logout();
   }
 
 }
