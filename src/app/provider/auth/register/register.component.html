@@ -1,31 +1,31 @@
 <div id="login-page">
     <div class="container">
-        <form class="form-login">
+        <form class="form-login" [formGroup]="registerForm">
           <h2 class="form-login-heading"><strong>Register</strong></h2>
           <div class="login-wrap">
-              <input type="text" class="form-control" placeholder="Name..." autofocus="">
+              <input type="text" class="form-control" placeholder="Name..." formControlName="VendorName">
               <br>
-              <input type="text" class="form-control" placeholder="Frim Name..." autofocus="">
+              <input type="text" class="form-control" placeholder="Frim Name..." formControlName="FirmName">
               <br>
-              <input type="text" class="form-control" placeholder="Tin..." autofocus="">
+              <input type="text" class="form-control" placeholder="Tin..." formControlName="TIN">
               <br>
-              <input type="text" class="form-control" placeholder="Pan..." autofocus="">
+              <input type="text" class="form-control" placeholder="Pan..." formControlName="PAN">
               <br>
-              <input type="text" class="form-control" placeholder="Gstn..." autofocus="">
+              <input type="text" class="form-control" placeholder="Gstn..." formControlName="GSTN" >
               <br>
-              <input type="text" class="form-control" placeholder="City..." autofocus="">
+              <input type="text" class="form-control" placeholder="City..." formControlName="City">
               <br>
-              <input type="number" class="form-control" placeholder="Pin Code..." autofocus="">
+              <input type="number" class="form-control" placeholder="Pin Code..." formControlName="PinCode">
               <br>
-              <input type="text" class="form-control" placeholder="Location..." autofocus="">
+              <input type="text" class="form-control" placeholder="Location..." formControlName="Location">
               <br>
-              <input type="number" class="form-control" placeholder="Landline No..">
+              <input type="number" class="form-control" placeholder="Landline No.." formControlName="Landline">
               <br>
-              <input type="text" class="form-control" placeholder="Phone No." autofocus="">
+              <input type="text" class="form-control" placeholder="Phone No." formControlName="Mobile">
               <br>
-              <textarea class="form-control" placeholder="Address..." autofocus=""></textarea>
+              <textarea class="form-control" placeholder="Address..." formControlName="RegisteredAddress"></textarea>
               <br>
-              <input type="text" class="form-control" placeholder="Type..." autofocus="">
+              <input type="text" class="form-control" placeholder="Type..." formControlName="VendorType">
               <br>
               <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> REGISTER </button>
           </div>

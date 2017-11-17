@@ -20,7 +20,7 @@ const routes: Routes = [
         {path: 'verify', component:VerifyComponent,canActivate:[VerifyGuard]},
         {path: 'reset', component:ResetComponent,canActivate: [AuthGuard]},
         {path: 'forget', component:ForgetComponent},
-        {path:'register', component:RegisterComponent,canActivate: [AuthGuard] },
+        {path:'register', component:RegisterComponent },
         {path:'', redirectTo:'signin'}
         ]},
     {path: 'dashboard', component:DashboardComponent,canActivate: [AuthGuard] },

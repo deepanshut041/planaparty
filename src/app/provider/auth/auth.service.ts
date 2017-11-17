@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Router } from "@angular/router";
 import * as firebase from "firebase";
@@ -9,13 +10,15 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AuthService {
 
-    constructor(private af: AngularFireDatabase, private afAuth: AngularFireAuth, private router: Router) {
+    constructor(private af: AngularFireDatabase, private afAuth: AngularFireAuth,
+         private router: Router, private http:HttpClient) {
     }
 
     getUser(){
         return this.afAuth.auth.currentUser;
     }
 
+    
     getUserStatus(){
         return this.afAuth.authState;
     }
@@ -33,5 +36,9 @@ export class AuthService {
         this.afAuth.auth.signOut().then((success) => {
             this.router.navigateByUrl('provider/auth/signin');
         })
+    }
+
+    registerUser(user){
+        return this.http.post('http://13.58.21.33/PlanAParty/api/Vendor/AddVendor',user);
     }
 }
