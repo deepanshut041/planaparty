@@ -25,7 +25,7 @@ import { VerifyGuard } from "./auth/verify-guard.service";
     exports: [
         ProviderComponent,
     ],
-    providers:[AuthGuard,VerifyGuard]
+    providers:[AuthGuard, VerifyGuard]
 })
 export class ProviderModule {
 

@@ -17,6 +17,11 @@ export class SigninComponent implements OnInit {
   }
 
   ngOnInit() {
+    const userKey = Object.keys(window.localStorage).filter(it => it.startsWith('firebase:authUser'))[0];
+    const user = userKey ? JSON.parse(localStorage.getItem(userKey)) : undefined;
+    if(user){
+      this.router.navigate(['provider/dashboard']);
+    }
     document.getElementById("spinner").style.display = "none";
     document.getElementById("login-page").style.display = "block";
   }

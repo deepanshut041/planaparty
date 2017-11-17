@@ -16,6 +16,11 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit() {
+    const userKey = Object.keys(window.localStorage).filter(it => it.startsWith('firebase:authUser'))[0];
+    const user = userKey ? JSON.parse(localStorage.getItem(userKey)) : undefined;
+    if(user){
+      this.router.navigate(['provider/dashboard']);
+    }
   }
   signup(email:string,password:string){
     var send = this._authService.signup(email,password)
