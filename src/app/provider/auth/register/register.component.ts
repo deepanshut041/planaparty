@@ -38,4 +38,13 @@ export class RegisterComponent implements OnInit {
       VendorType: new FormControl('')
     });
   }
+
+  registerUser(){
+    console.log(this.registerForm.value)
+    this.authService.registerUser(this.registerForm.value).subscribe(()=>{
+      console.log("User registered")
+    },(err)=>{
+      console.log(err)
+    })
+  }
 }
