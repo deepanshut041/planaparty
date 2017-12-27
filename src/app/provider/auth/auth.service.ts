@@ -39,6 +39,6 @@ export class AuthService {
     }
 
     registerUser(user){
-        return this.http.post('http://13.58.21.33/PlanAParty/api/Vendor/AddVendor',user);
+        return this.http.post('http://localhost:8080/api/Vendor/AddVendor',user);
     }
 }
