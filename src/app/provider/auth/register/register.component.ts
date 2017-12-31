@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
     const userKey = Object.keys(window.localStorage).filter(it => it.startsWith('firebase:authUser'))[0];
     const user = userKey ? JSON.parse(localStorage.getItem(userKey)) : undefined;
-    console.log(user.email);
+    this.email = user.email
     this.registerForm = new FormGroup({
       VendorName: new FormControl(''),
       FirmName: new FormControl(''),
@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
       City: new FormControl(''),
       PinCode: new FormControl(''),
       Location: new FormControl(''),
-      Email: new FormControl(''),
+      Email: new FormControl(user.email),
       Mobile: new FormControl(''),
       Landline: new FormControl(''),
       EstablishedDate: new FormControl(''),
